@@ -15,10 +15,12 @@ namespace fuzzy_lana
             Console.ReadKey();
 
             /*Pinging Google via prompted CLI
-             Wanting to do these commands without the popup.*/
+             Wanting to do these commands without the popup.
+             Ideally the program will run behind the scenes and under the radar.*/
             string strCmdText;
             strCmdText = "/C ping google.com";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+
             Console.ReadKey();
         }
     }
