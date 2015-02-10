@@ -29,3 +29,10 @@ namespace fuzzy_lana
         }
     }
 }
+
+namespace billy_wonkers
+{
+    //Use selector above and place code down here
+    //I want it to dump VBS and batch scripts that I use regularly
+
+}
