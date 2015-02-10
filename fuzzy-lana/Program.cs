@@ -10,8 +10,12 @@ namespace fuzzy_lana
     {
         static void Main(string[] args)
         {
+            //Hello World Segment
             Console.WriteLine("Hello World!");
             Console.ReadKey();
+
+            /*Pinging Google via prompted CLI
+             Wanting to do these commands without the popup.*/
             string strCmdText;
             strCmdText = "/C ping google.com";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
