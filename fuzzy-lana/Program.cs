@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace fuzzy_lana
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace fuzzy_lana{
+    class Program{
+        static void Main(string[] args){
             //Hello World Segment
             Console.WriteLine("Hello World!");
             Console.ReadKey();
@@ -30,9 +27,16 @@ namespace fuzzy_lana
     }
 }
 
-namespace billy_wonkers
-{
+namespace billy_wonkers{
     //Use selector above and place code down here
     //I want it to dump VBS and batch scripts that I use regularly
+
+}
+
+namespace bobs_array{
+
+}
+
+namespace dump_gen{
 
 }
