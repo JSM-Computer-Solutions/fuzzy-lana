@@ -10,6 +10,9 @@ namespace fuzzy_lana
     {
         static void Main(string[] args)
         {
+            string strCmdText;
+            strCmdText = "ping google.com";
+            System.Diagnostics.Process.Start("CMD.exe", strCmdText);
         }
     }
 }
