@@ -35,7 +35,12 @@ namespace billy_wonkers{
 
 namespace bobs_array{
     //Delete Temp Files, supress errors
-
+    string blep = "del %homedrive%\Temp\*.* /F /S /Q";
+    System.Diagnostics.Process.Start("CMD.exe", blep);
+    string derp = "del %localappdata\Temp\*.* /F /S /Q";
+    System.Diagnostics.Process.Start("CMD.exe", derp);
+    string darp = "del %appdata\Temp\*.* /F /S /Q";
+    System.Diagnostics.Process.Start("CMD.exe", darp);
 
     //Quick Clean
     string CC = "/AUTO";
