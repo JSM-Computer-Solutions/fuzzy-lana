@@ -8,10 +8,10 @@ namespace fuzzy_lana{
     class Program{
         static void Main(string[] args){
             //Hello World Segment
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("\aHello World!");
             Console.ReadKey();
                         
-            Console.WriteLine("What's the Password?\n");
+            Console.WriteLine("\aWhat's the Password?\n");
             string saul=Console.ReadLine();
             
             if(saul=="CorrectStapleHorse" || saul=="3wa4es5rd6tf*"){
@@ -34,7 +34,21 @@ namespace fuzzy_lana{
 
         static void bobs_array(){
         //Delete Temp Files, supress errors
-        string blep = "/C del %homedrive%\\Temp\\*.* /F /S /Q";
+        System.Diagnostics.Process Clean=new System.Diagnostics.Process();
+        System.Diagnostics.ProcessStartInfo GitRDone=new System.Diagnostics.ProcessStartInfo();
+        GitRDone.WindowStyle=System.Diagnostics.ProcessWindowStyle.Hidden;
+        GitRDone.FileName="cmd.exe";
+
+        GitRDone.Arguments = "/C del %homedrive%\\Temp\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C RMDIR %homedrive%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C del %localappdata%\\Temp\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C RMDIR %localappdata%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C del %appdata%\\Temp\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C RMDIR %appdata%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C del %Temp%\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+        GitRDone.Arguments = "/C RMDIR %Temp%\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+
+        /*string blep = "/C del %homedrive%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", blep);
         blep = "/C RMDIR %homedrive%\\Temp\\ /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", blep);
@@ -52,7 +66,7 @@ namespace fuzzy_lana{
         string dirp = "/C del %Temp%\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", dirp);
         dirp = "/C RMDIR %Temp%\\ /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", dirp);
+        System.Diagnostics.Process.Start("CMD.exe", dirp);*/
         }
 
         static void dump_gen(){
