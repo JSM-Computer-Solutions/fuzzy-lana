@@ -22,19 +22,13 @@ namespace fuzzy_lana{
 
         }
 
-        static void BATCH_DUMP(){
-        //Use selector above and place code down here
-        //I want it to dump VBS and batch scripts that I use regularly
-
-        }
-
+        //SPAAAAAAAACCCEEEE
         static void CLI_CLEAN(){
-        //Delete Temp Files, supress errors
+        //Delete Temp Files, supress errors - FINISHED
         System.Diagnostics.Process Clean=new System.Diagnostics.Process();
         System.Diagnostics.ProcessStartInfo GitRDone=new System.Diagnostics.ProcessStartInfo();
         GitRDone.WindowStyle=System.Diagnostics.ProcessWindowStyle.Hidden;
         GitRDone.FileName="cmd.exe";
-
         GitRDone.Arguments = "/C del %homedrive%\\Temp\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C RMDIR %homedrive%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C del %localappdata%\\Temp\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
@@ -43,23 +37,30 @@ namespace fuzzy_lana{
         GitRDone.Arguments = "/C RMDIR %appdata%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C del %Temp%\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C RMDIR %Temp%\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
-        
         }
 
+        //SPAAAAAAAACCCEEEE
         static void PROG_CLEAN(){
         //Check for %LOCALAPPDATA%\JSM - If not exist, fetch package and extract
 
 
-        //Place an IF statement so that files are in JSM folder
-        //Quick Clean
-        string cc1 = "/C /AUTO";
-        System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc1);
-        //Quick Defrag
-        string df1 = "/C C:\\ /QD /S";
-        System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df1);
-        //Full Defrag - biggest to the end
-        string df2 = "/C C:\\ /Large *.* 250 /S";
-        System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df2);
+            //Place an IF statement so that files are in JSM folder
+            //Quick Clean
+            string cc1 = "/C /AUTO";
+            System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc1);
+            //Quick Defrag
+            string df1 = "/C C:\\ /QD /S";
+            System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df1);
+            //Full Defrag - biggest to the end
+            string df2 = "/C C:\\ /Large *.* 250 /S";
+            System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df2);
+        }
+
+        //SPAAAAAAAACCCEEEE
+        static void BATCH_DUMP(){
+            //Use selector above and place code down here
+            //I want it to dump VBS and batch scripts that I use regularly
+
         }
     }
 }
