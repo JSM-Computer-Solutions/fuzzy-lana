@@ -20,41 +20,43 @@ namespace fuzzy_lana{
                 Ideally the program will run behind the scenes and under the radar.*/
                 //string strCmdText;
                 string strCmdText = "/C ping google.com";
-                System.Diagnostics.Process.Start("%comspec%", strCmdText);
+                System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+                bobs_array();
                 Console.ReadKey(); }
 
+        }
+
+        static void billy_wonkers(){
+        //Use selector above and place code down here
+        //I want it to dump VBS and batch scripts that I use regularly
+
+        }
+
+        static void bobs_array(){
+        //Delete Temp Files, supress errors
+        string blep = "del %homedrive%\\Temp\\*.* /F /S /Q";
+        System.Diagnostics.Process.Start("CMD.exe", blep);
+        string derp = "del %localappdata\\Temp\\*.* /F /S /Q";
+        System.Diagnostics.Process.Start("CMD.exe", derp);
+        string darp = "del %appdata\\Temp\\*.* /F /S /Q";
+        System.Diagnostics.Process.Start("CMD.exe", darp);
+        string dirp = "del %Temp%\\*.* /F /S /Q";
+        System.Diagnostics.Process.Start("CMD.exe", dirp);
+        
+        //Quick Clean
+        string cc = "/AUTO";
+        System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc);
+        //Quick Defrag
+        string df1 = "C:\\ /QD /S";
+        System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df1);
+        //Full Defrag - biggest to the end
+        string df2 = "C:\\ /Large *.* 250 /S";
+        System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df2);
+        }
+
+        static void dump_gen(){
+        
         }
     }
 }
 
-namespace billy_wonkers{
-    //Use selector above and place code down here
-    //I want it to dump VBS and batch scripts that I use regularly
-
-}
-
-namespace bobs_array{
-    //Delete Temp Files, supress errors
-    string blep = "del %homedrive%\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("%comspec%", blep);
-    string derp = "del %localappdata\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("%comspec%", derp);
-    string darp = "del %appdata\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("%comspec%", darp);
-    string dirp = "del %Temp%\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("%comspec%", dirp);
-
-    //Quick Clean
-    string CC = "/AUTO";
-    System.Diagnostics.Process.Start("C:\Program Files\CCleaner\CCleaner.exe", CC);
-    //Quick Defrag
-    string DF1 = "C:\ /QD /S";
-    System.Diagnostics.Process.Start("C:\Program Files\Defraggler\df.exe", DF1);
-    //Full Defrag - biggest to the end
-    string DF2 = "C:\ /Large *.* 250 /S";
-    System.Diagnostics.Process.Start("C:\Program Files\Defraggler\df.exe", DF2);
-}
-
-namespace dump_gen{
-
-}
