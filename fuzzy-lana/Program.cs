@@ -52,13 +52,13 @@ namespace fuzzy_lana{
 
         //Place an IF statement so that files are in JSM folder
         //Quick Clean
-        string cc1 = "/AUTO";
+        string cc1 = "/C /AUTO";
         System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc1);
         //Quick Defrag
-        string df1 = "C:\\ /QD /S";
+        string df1 = "/C C:\\ /QD /S";
         System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df1);
         //Full Defrag - biggest to the end
-        string df2 = "C:\\ /Large *.* 250 /S";
+        string df2 = "/C C:\\ /Large *.* 250 /S";
         System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df2);
         }
     }
