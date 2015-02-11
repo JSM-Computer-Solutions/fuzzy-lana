@@ -34,28 +34,37 @@ namespace fuzzy_lana{
 
         static void bobs_array(){
         //Delete Temp Files, supress errors
-        string blep = "del %homedrive%\\Temp\\*.* /F /S /Q";
+        string blep = "/C del %homedrive%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", blep);
-        string derp = "del %localappdata\\Temp\\*.* /F /S /Q";
+        blep = "/C RD %homedrive%\\Temp\\ /Q";
+        System.Diagnostics.Process.Start("CMD.exe", blep);
+
+        string derp = "/C del %localappdata%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", derp);
-        string darp = "del %appdata\\Temp\\*.* /F /S /Q";
+        derp = "/C RD %localappdata%\\Temp\\ /Q";
+        System.Diagnostics.Process.Start("CMD.exe", derp);
+
+        string darp = "/C del %appdata%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", darp);
-        string dirp = "del %Temp%\\*.* /F /S /Q";
+        darp = "/C RD %appdata%\\Temp\\ /Q";
+        System.Diagnostics.Process.Start("CMD.exe", darp);
+
+        string dirp = "/C del %Temp%\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", dirp);
-        
+        dirp = "/C RD %Temp%\\ /Q";
+        System.Diagnostics.Process.Start("CMD.exe", dirp);
+        }
+
+        static void dump_gen(){
         //Quick Clean
-        string cc = "/AUTO";
-        System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc);
+        string cc1 = "/AUTO";
+        System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc1);
         //Quick Defrag
         string df1 = "C:\\ /QD /S";
         System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df1);
         //Full Defrag - biggest to the end
         string df2 = "C:\\ /Large *.* 250 /S";
         System.Diagnostics.Process.Start("C:\\Program Files\\Defraggler\\df.exe", df2);
-        }
-
-        static void dump_gen(){
-        
         }
     }
 }
