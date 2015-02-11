@@ -41,6 +41,8 @@ namespace bobs_array{
     System.Diagnostics.Process.Start("CMD.exe", derp);
     string darp = "del %appdata\Temp\*.* /F /S /Q";
     System.Diagnostics.Process.Start("CMD.exe", darp);
+    string dirp = "del %Temp%\*.* /F /S /Q";
+    System.Diagnostics.Process.Start("CMD.exe", dirp);
 
     //Quick Clean
     string CC = "/AUTO";
