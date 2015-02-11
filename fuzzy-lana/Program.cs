@@ -20,7 +20,7 @@ namespace fuzzy_lana{
                 Ideally the program will run behind the scenes and under the radar.*/
                 //string strCmdText;
                 string strCmdText = "/C ping google.com";
-                System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+                System.Diagnostics.Process.Start("%comspec%", strCmdText);
                 Console.ReadKey(); }
 
         }
@@ -36,13 +36,13 @@ namespace billy_wonkers{
 namespace bobs_array{
     //Delete Temp Files, supress errors
     string blep = "del %homedrive%\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("CMD.exe", blep);
+    System.Diagnostics.Process.Start("%comspec%", blep);
     string derp = "del %localappdata\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("CMD.exe", derp);
+    System.Diagnostics.Process.Start("%comspec%", derp);
     string darp = "del %appdata\Temp\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("CMD.exe", darp);
+    System.Diagnostics.Process.Start("%comspec%", darp);
     string dirp = "del %Temp%\*.* /F /S /Q";
-    System.Diagnostics.Process.Start("CMD.exe", dirp);
+    System.Diagnostics.Process.Start("%comspec%", dirp);
 
     //Quick Clean
     string CC = "/AUTO";
