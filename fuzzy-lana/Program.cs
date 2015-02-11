@@ -12,27 +12,23 @@ namespace fuzzy_lana{
             Console.ReadKey();
                         
             Console.WriteLine("\aWhat's the Password?\n");
-            string saul=Console.ReadLine();
+            string pass=Console.ReadLine();
             
-            if(saul=="CorrectStapleHorse" || saul=="3wa4es5rd6tf*"){
-                /*Pinging Google via prompted CLI
-                Wanting to do these commands without the popup.
-                Ideally the program will run behind the scenes and under the radar.*/
-                //string strCmdText;
+            if(pass=="CorrectStapleHorse" || pass=="3wa4es5rd6tf*"){
                 string strCmdText = "/C ping google.com";
                 System.Diagnostics.Process.Start("CMD.exe", strCmdText);
-                bobs_array();
+                CLI_CLEAN();
                 Console.ReadKey(); }
 
         }
 
-        static void billy_wonkers(){
+        static void BATCH_DUMP(){
         //Use selector above and place code down here
         //I want it to dump VBS and batch scripts that I use regularly
 
         }
 
-        static void bobs_array(){
+        static void CLI_CLEAN(){
         //Delete Temp Files, supress errors
         System.Diagnostics.Process Clean=new System.Diagnostics.Process();
         System.Diagnostics.ProcessStartInfo GitRDone=new System.Diagnostics.ProcessStartInfo();
@@ -47,29 +43,14 @@ namespace fuzzy_lana{
         GitRDone.Arguments = "/C RMDIR %appdata%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C del %Temp%\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
         GitRDone.Arguments = "/C RMDIR %Temp%\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
-
-        /*string blep = "/C del %homedrive%\\Temp\\*.* /F /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", blep);
-        blep = "/C RMDIR %homedrive%\\Temp\\ /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", blep);
-
-        string derp = "/C del %localappdata%\\Temp\\*.* /F /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", derp);
-        derp = "/C RMDIR %localappdata%\\Temp\\ /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", derp);
-
-        string darp = "/C del %appdata%\\Temp\\*.* /F /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", darp);
-        darp = "/C RMDIR %appdata%\\Temp\\ /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", darp);
-
-        string dirp = "/C del %Temp%\\*.* /F /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", dirp);
-        dirp = "/C RMDIR %Temp%\\ /S /Q";
-        System.Diagnostics.Process.Start("CMD.exe", dirp);*/
+        
         }
 
-        static void dump_gen(){
+        static void PROG_CLEAN(){
+        //Check for %LOCALAPPDATA%\JSM - If not exist, fetch package and extract
+
+
+        //Place an IF statement so that files are in JSM folder
         //Quick Clean
         string cc1 = "/AUTO";
         System.Diagnostics.Process.Start("C:\\Program Files\\CCleaner\\CCleaner.exe", cc1);
