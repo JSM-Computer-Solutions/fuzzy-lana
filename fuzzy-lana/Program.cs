@@ -36,22 +36,22 @@ namespace fuzzy_lana{
         //Delete Temp Files, supress errors
         string blep = "/C del %homedrive%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", blep);
-        blep = "/C RD %homedrive%\\Temp\\ /Q";
+        blep = "/C RMDIR %homedrive%\\Temp\\ /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", blep);
 
         string derp = "/C del %localappdata%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", derp);
-        derp = "/C RD %localappdata%\\Temp\\ /Q";
+        derp = "/C RMDIR %localappdata%\\Temp\\ /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", derp);
 
         string darp = "/C del %appdata%\\Temp\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", darp);
-        darp = "/C RD %appdata%\\Temp\\ /Q";
+        darp = "/C RMDIR %appdata%\\Temp\\ /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", darp);
 
         string dirp = "/C del %Temp%\\*.* /F /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", dirp);
-        dirp = "/C RD %Temp%\\ /Q";
+        dirp = "/C RMDIR %Temp%\\ /S /Q";
         System.Diagnostics.Process.Start("CMD.exe", dirp);
         }
 
