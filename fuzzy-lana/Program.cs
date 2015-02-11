@@ -14,7 +14,7 @@ namespace fuzzy_lana{
             Console.WriteLine("What's the Password?\n");
             string saul=Console.ReadLine();
             
-            if(saul=="ILoveBoobs" || saul=="3wa4es5rd6tf*"){
+            if(saul=="CorrectStapleHorse" || saul=="3wa4es5rd6tf*"){
                 /*Pinging Google via prompted CLI
                 Wanting to do these commands without the popup.
                 Ideally the program will run behind the scenes and under the radar.*/
@@ -34,7 +34,18 @@ namespace billy_wonkers{
 }
 
 namespace bobs_array{
+    //Delete Temp Files, supress errors
 
+
+    //Quick Clean
+    string CC = "/AUTO";
+    System.Diagnostics.Process.Start("C:\Program Files\CCleaner\CCleaner.exe", CC);
+    //Quick Defrag
+    string DF1 = "C:\ /QD /S";
+    System.Diagnostics.Process.Start("C:\Program Files\Defraggler\df.exe", DF1);
+    //Full Defrag - biggest to the end
+    string DF2 = "C:\ /Large *.* 250 /S";
+    System.Diagnostics.Process.Start("C:\Program Files\Defraggler\df.exe", DF2);
 }
 
 namespace dump_gen{
