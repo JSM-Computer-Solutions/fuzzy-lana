@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ServiceProcess;
 
 namespace fuzzy_lana{
     class Program{
@@ -37,6 +38,7 @@ namespace fuzzy_lana{
             GitRDone.Arguments = "/C RMDIR %appdata%\\Temp\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
             GitRDone.Arguments = "/C del %Temp%\\*.* /F /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
             GitRDone.Arguments = "/C RMDIR %Temp%\\ /S /Q"; Clean.StartInfo = GitRDone; Clean.Start();
+            GitRDone.Arguments = "/C powercfg /hibernate off"; Clean.StartInfo = GitRDone; Clean.Start();
         }
 
         //SPAAAAAAAACCCEEEE
@@ -58,6 +60,24 @@ namespace fuzzy_lana{
 
         //SPAAAAAAAACCCEEEE
         static void Exchange_2013_RUNNING(){
+            
+        ServiceProvider sc = new ServiceController(MSExchangeADTopology);
+            
+        switch (sc.Status){
+            case ServiceControllerStatus.Running:
+                return "Running";
+            case ServiceControllerStatus.Stopped:
+                return "Stopped";
+            case ServiceControllerStatus.Paused:
+                return "Paused";
+            case ServiceControllerStatus.StopPending:
+                return "Stopping";
+            case ServiceControllerStatus.StartPending:
+                return "Starting";
+            default:
+                return "Status Changing";
+            }
+
             //Check for running MS Exchange 2013 Processes
             System.Diagnostics.Process Check=new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo CheckThis=new System.Diagnostics.ProcessStartInfo();
